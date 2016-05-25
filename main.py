@@ -1,7 +1,9 @@
 import hashlib
 import base64
-sn='ACPZ0F6211991'
-mac='B0:D5:9D:35:F1:6E'
+#sn='ACPZ0F6211991'
+#mac='B0:D5:9D:35:F1:6E'
+sn=raw_input('please input your SN:')
+mac=raw_input('please input your MAC: (example AE:C8:XX:XX:XX:XX)')
 enckey='i8e%Fvj24nz024@d!c'
 str=sn+mac+enckey
 tmp=hashlib.md5()
@@ -16,4 +18,4 @@ for i in range(len(s)):
 		s[i]=chr(95)
 			
 	
-print s[0:8]
+print 'your root password:'+s[0:8]
